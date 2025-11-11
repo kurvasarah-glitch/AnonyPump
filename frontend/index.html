@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnonyPump</title>
+  <link rel="icon" href="logo2.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="main-container">
+    <div id="left-panel">
+      <h1>ANONYPUMP</h1>
+      <img src="logo2.png" alt="AnonyPump Logo" id="main-logo">
+
+      <form id="postForm">
+        <textarea id="content" placeholder="Share your thoughts..." required></textarea>
+        <button type="submit" class="post-button">Post</button>
+      </form>
+      <div id="posts"></div>
+      <button id="loadMorePosts" class="post-button" style="display: none;">Load More</button>
+    </div>
+    <div id="right-panel">
+      <h2>LEADERBOARD</h2>
+      <div id="leaderboard-posts"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

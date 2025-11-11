@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: anony-pump
+    env: node
+    buildCommand: cd anony_pump && npm install
+    startCommand: cd anony_pump && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+

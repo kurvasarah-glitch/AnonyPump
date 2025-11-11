@@ -1,0 +1,167 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+#main-container {
+  display: flex;
+  gap: 20px;
+  max-width: 95%; /* Make it wider */
+  margin: 20px auto; /* Less space on left and right */
+}
+
+#left-panel, #right-panel {
+  flex: 1;
+  background-color: transparent; /* Remove background */
+  padding: 20px;
+  border-radius: 0; /* Remove border-radius */
+  border: none; /* Remove border */
+}
+
+h1 {
+  color: #00ff00; /* Bright green */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+#main-logo {
+  display: block;
+  margin: 0px auto 20px auto;
+  width: 250px; /* Make it way bigger */
+  height: auto;
+}
+
+h2 {
+  color: #00ff00;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+#postForm {
+  margin-bottom: 20px; /* Add space below the post button */
+}
+
+textarea {
+  width: calc(100% - 22px);
+  height: 100px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+button {
+  background-color: #00ff00;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #33ff33;
+}
+
+.post-button {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.upvote, .downvote {
+  padding: 5px 10px; /* Smaller padding for vote buttons */
+  font-size: 0.9em; /* Slightly smaller text for vote buttons */
+}
+
+.post {
+  background-color: #2a2a2a;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.post p {
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.post small {
+  color: #aaaaaa;
+  font-size: 0.85em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.post div {
+  margin-top: 10px;
+}
+
+.upvote-count-highlight {
+  color: #ff0000; /* Bright red color for upvote counts */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.downvote-count-highlight {
+  color: #ff0000; /* Bright red color for downvote counts */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.leaderboard-upvote-count-highlight {
+  color: #00ff00; /* Bright green color for leaderboard upvote counts */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.post.new-post-animation {
+  animation: fadeInSlideUp 0.5s ease-out;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vote-count-animation {
+  animation: voteBounce 0.3s ease-out;
+}
+
+@keyframes voteBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.bouncing-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 9999;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
